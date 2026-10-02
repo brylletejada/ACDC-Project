@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ACDC Pathways helps students explore careers, learning opportunities, internships, and support in one place." />
+    <title>ACDC Pathways | Find your next step</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="ACDC Pathways home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong><Center>ASIAN COMMUNITY</Center></strong><Center><strong>DEVELOPMENT CENTER</strong></Center><small><Center>PATHWAYS</small></Center></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="#explore" data-nav="explore">Explore</a>
+        <a class="nav-link" href="#resources" data-nav="resources">Learning resources</a>
+        <a class="nav-link" href="#opportunities" data-nav="opportunities">Opportunities</a>
+        <a class="nav-link" href="#support" data-nav="support">Student support</a>
+      </nav>
+
+      <div class="top-actions">
+        <button class="icon-button" id="savedButton" aria-label="View saved items">
+          <span class="bookmark-icon">♡</span>
+          <span class="saved-count">0</span>
+        </button>
+        <button class="profile-button" id="profileButton">
+          <span class="avatar">BG</span><span class="profile-name">My dashboard</span>
+          <span class="chevron">⌄</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="explore">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+        <div class="hero-content">
+          <p class="eyebrow light"><span class="eyebrow-dot"></span> Your future starts with one step</p>
+          <h1>Find a path that<br /><em>feels like you.</em></h1>
+          <p class="hero-text">Explore careers, build practical skills, and connect with opportunities that move you forward.</p>
+          <div class="search-wrap hero-search">
+            <span class="search-symbol">⌕</span>
+            <input id="globalSearch" type="search" placeholder="Search careers, courses, internships..." autocomplete="off" />
+            <button id="searchButton" class="search-button">Search</button>
+          </div>
+          <div class="hero-tags" aria-label="Popular searches">
+            <span>Popular:</span>
+            <button class="tag-link" data-search="technology">Technology</button>
+            <button class="tag-link" data-search="business">Business</button>
+            <button class="tag-link" data-search="psychology">Psychology</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of students exploring connected opportunities">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="planet"><span class="planet-grid"></span>
+            <span class="planet-pin pin-one"></span>
+            <span class="planet-pin pin-two"></span>
+            <span class="planet-pin pin-three"></span></div>
+          <div class="art-card art-card-top"><span class="art-icon">✦</span>
+            <span><strong>12 new</strong>
+              <small>opportunities</small></span></div>
+          <div class="art-card art-card-bottom"><span class="mini-avatar">✿</span>
+            <span><strong>Meet your mentor</strong>
+              <small>Weekly group sessions</small></span></div>
+          <div class="star star-one">✦</div>
+          <div class="star star-two">✧</div>
+          <div class="star star-three">✦</div>
+        </div>
+      </section>
+
+      <section class="content-shell">
+        <div class="welcome-row">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Student hub</p>
+            <h2>Good morning, Brylle <span class="wave">✦</span></h2>
+            <p class="muted">A little progress today can open a big door tomorrow.</p>
+          </div>
+          <button class="text-button" id="resetButton">Reset view <span>↗</span></button>
+        </div>
+
+        <section class="section-block" aria-labelledby="pathways-heading">
+          <div class="section-heading">
+            <div><p class="eyebrow">Start exploring</p>
+              <h2 id="pathways-heading">Choose your direction</h2></div>
+            <button class="outline-button" data-scroll="resources">View all pathways <span>→</span></button>
+          </div>
+          <div class="pathway-grid" id="pathwayGrid"></div>
+        </section>
+
+        <div class="two-column">
+          <section class="section-block compact-section" id="resources" aria-labelledby="resources-heading">
+            <div class="section-heading"><div>
+              <p class="eyebrow">Build your skills</p>
+              <h2 id="resources-heading">Learning resources</h2></div>
+              <button class="round-arrow" data-scroll="resources" aria-label="See more learning resources">→</button></div>
+            <div class="resource-list" id="resourceList"></div>
+          </section>
+
+          <aside class="progress-card">
+            <div class="progress-card-header"><span class="eyebrow light">Your progress</span>
+              <span class="progress-percent">28%</span></div>
+            <h3>Build your career map</h3>
+            <p>Complete a few quick steps to get recommendations made for you.</p>
+            <div class="progress-bar"><span style="width: 28%"></span></div>
+            <div class="progress-step done">
+              <span>✓</span>
+              <div><strong>Tell us about your interests</strong>
+                <small>Completed</small></div></div>
+            <div class="progress-step">
+              <span>2</span>
+              <div><strong>Explore one pathway</strong>
+                <small>5 min</small></div></div>
+            <div class="progress-step">
+              <span>3</span>
+              <div><strong>Save an opportunity</strong>
+                <small>2 min</small></div></div>
+            <button class="light-button" id="continueButton">Continue my map <span>→</span></button>
+          </aside>
+        </div>
+
+        <section class="section-block opportunities-section" id="opportunities" aria-labelledby="opportunities-heading">
+          <div class="section-heading"><div><p class="eyebrow">Make your next move</p>
+            <h2 id="opportunities-heading">Fresh opportunities</h2>
+            <p class="muted">Internships, volunteer roles, and experiences curated for students.</p></div>
+            <button class="outline-button" data-scroll="opportunities">Explore opportunities <span>→</span></button></div>
+          <div class="opportunity-grid" id="opportunityGrid"></div>
+        </section>
+
+        <section class="support-banner" id="support" aria-labelledby="support-heading">
+          <div class="support-copy"><p class="eyebrow light">You do not have to figure it out alone</p>
+            <h2 id="support-heading">Find the support<br /><em>you need to keep going.</em></h2>
+            <p>From mentors and peer communities to practical help, ACDC is here for the whole journey.</p>
+            <button class="light-button" id="supportButton">Explore student support <span>→</span></button></div>
+          <div class="support-visual">
+            <div class="support-circle circle-large"></div>
+            <div class="support-circle circle-small"></div>
+            <div class="support-person person-one">✦</div>
+            <div class="support-person person-two">✿</div>
+            <div class="support-person person-three">●</div>
+            <div class="support-chat"><span>•••</span>
+              <strong>You belong here.</strong></div></div>
+        </section>
+
+        <section class="how-section" aria-labelledby="how-heading">
+          <div class="section-heading"><div><p class="eyebrow">Simple by design</p>
+            <h2 id="how-heading">From curious to confident</h2></div>
+            <span class="small-note">Your journey, your pace.</span></div>
+          <div class="how-grid"><div class="how-step">
+            <span class="step-number">01</span>
+            <span class="step-icon">⌕</span>
+            <h3>Browse</h3>
+            <p>Discover pathways and resources that match your interests.</p></div>
+            <div class="how-step highlighted"><span class="step-number">02</span>
+              <span class="step-icon">↗</span>
+              <h3>Connect</h3><p>Find mentors, programs, and opportunities to help you grow.</p></div>
+              <div class="how-step"><span class="step-number">03</span>
+                <span class="step-icon">✦</span>
+                <h3>Grow</h3><p>Build skills, earn experience, and take your next step.</p></div></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="brand footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span></span>
+          <span class="brand-copy"><strong>ACDC</strong>
+            <small>PATHWAYS</small></span></div>
+            <p>Connecting students to possibilities.</p>
+            <div class="footer-links"><a href="#support">About ACDC</a>
+              <a href="#support">Contact</a>
+              <a href="#support">Accessibility</a></div></footer>
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+        <div id="modalContent"></div></section></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
